@@ -334,7 +334,7 @@ const AppContainer = ({
     },
     dataBar: {
       // isOpen: true,
-      editable: false,
+      editable: true,
       header: DataBarHeader,
     },
     actionBar: {
