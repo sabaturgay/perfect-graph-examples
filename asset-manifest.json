@@ -1,23 +1,23 @@
 {
   "files": {
-    "app.js": "/perfect-graph-examples/static/js/app.5d7a1433.chunk.js",
-    "app.js.map": "/perfect-graph-examples/static/js/app.5d7a1433.chunk.js.map",
+    "app.js": "/perfect-graph-examples/static/js/app.766c9811.chunk.js",
+    "app.js.map": "/perfect-graph-examples/static/js/app.766c9811.chunk.js.map",
     "runtime~app.js": "/perfect-graph-examples/static/js/runtime~app.f9170e90.js",
     "runtime~app.js.map": "/perfect-graph-examples/static/js/runtime~app.f9170e90.js.map",
-    "static/js/2.785e7d6f.chunk.js": "/perfect-graph-examples/static/js/2.785e7d6f.chunk.js",
-    "static/js/2.785e7d6f.chunk.js.map": "/perfect-graph-examples/static/js/2.785e7d6f.chunk.js.map",
+    "static/js/2.33d4fcf9.chunk.js": "/perfect-graph-examples/static/js/2.33d4fcf9.chunk.js",
+    "static/js/2.33d4fcf9.chunk.js.map": "/perfect-graph-examples/static/js/2.33d4fcf9.chunk.js.map",
     "favicon-16.png": "/perfect-graph-examples/favicon-16.png",
     "favicon-32.png": "/perfect-graph-examples/favicon-32.png",
     "favicon.ico": "/perfect-graph-examples/favicon.ico",
     "index.html": "/perfect-graph-examples/index.html",
     "manifest.json": "/perfect-graph-examples/manifest.json",
     "serve.json": "/perfect-graph-examples/serve.json",
-    "static/js/2.785e7d6f.chunk.js.LICENSE.txt": "/perfect-graph-examples/static/js/2.785e7d6f.chunk.js.LICENSE.txt",
+    "static/js/2.33d4fcf9.chunk.js.LICENSE.txt": "/perfect-graph-examples/static/js/2.33d4fcf9.chunk.js.LICENSE.txt",
     "static/media/jsoneditor-icons.svg": "/perfect-graph-examples/static/media/jsoneditor-icons.15f2789d.svg"
   },
   "entrypoints": [
     "static/js/runtime~app.f9170e90.js",
-    "static/js/2.785e7d6f.chunk.js",
-    "static/js/app.5d7a1433.chunk.js"
+    "static/js/2.33d4fcf9.chunk.js",
+    "static/js/app.766c9811.chunk.js"
   ]
 }
