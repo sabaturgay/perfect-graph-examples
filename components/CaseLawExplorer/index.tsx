@@ -35,7 +35,7 @@ import { getFilterSchema, getFetchSchema, VIEW_CONFIG_SCHEMA, RECORDED_EVENTS } 
 import { EVENT } from 'perfect-graph/constants'
 import { useController } from 'perfect-graph/plugins/controller'
 import { createSchema } from 'perfect-graph/plugins/createSchema'
-import { getSelectedItemByElement } from 'perfect-graph/utils'
+import { getSelectedItemByElement, getSelectedElementInfo } from 'perfect-graph/utils'
 import { calculateStatistics } from './utils/networkStatistics'
 import { RenderNode } from './RenderNode'
 import { RenderEdge } from './RenderEdge'
@@ -376,9 +376,17 @@ const AppContainer = ({
         item: selectedItem,
         index: selectedItemIndex,
       } = (element && getSelectedItemByElement(element, draft)) ?? {}
+      console.log(type, payload)
       switch (type) {
         case EVENT.ELEMENT_SELECTED: {
           // draft.isLoading = true
+          const {
+            itemIds,
+          } = payload
+          draft.selectedElementIds = itemIds
+          const {
+            selectedItem
+          } = getSelectedElementInfo(draft, graphEditor)
           let elementData = null
           try {
             elementData = await API.getElementData({ id: selectedItem.data.ecli });
@@ -389,17 +397,9 @@ const AppContainer = ({
             })
             console.error(error)
           }
+          
           if (elementData && !R.isEmpty(elementData)) {
-            update((draft) => {
-              const {
-                item: selectedItem,
-                index: selectedItemIndex,
-              } = (element && getSelectedItemByElement(element, draft)) ?? {}
-              const elementList = element.isNode() ? draft.nodes : draft.edges
-              const itemDraft = elementList.find((elementItem) => elementItem.id === selectedItem.id)
-              itemDraft.data = elementData
-              // draft.isLoading = false
-            })
+            selectedItem.data = elementData
           } else {
             // alertRef.current.alert({
             //   type: 'warning',
