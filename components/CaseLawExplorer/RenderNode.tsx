@@ -42,24 +42,11 @@ export const RenderNode = ({
         localDataRef.current.scale.x = xScale
         localDataRef.current.scale.y = yScale
         if (xScale >= 1 && xScale <= 5) {
-          textRef.current.scale.x = xScale
-          textRef.current.scale.y = yScale
-          const top =  (- DEFAULT_FONT_SIZE * TOP_SCALE * yScale) + size/2
-          const left =  (- DEFAULT_FONT_SIZE/2 +6) * xScale
-          // if (text === 'BC6699') {
-          //   console.log(top, left)
-          // }
+          const top =  - DEFAULT_FONT_SIZE * yScale
+          const left =  - (DEFAULT_FONT_SIZE / 2) * xScale
+          textRef.current.x = left
+          textRef.current.y = top
           return
-          textRef.current.__yoga.top =  top
-            textRef.current.__yoga.left =  left
-            localDataRef.current.text.top = top
-            localDataRef.current.text.left = left
-            if (text === 'BC6699') {
-              console.log(top, left)
-            }
-          
-          
-          
         }
     }
     if (graphRef.current.viewport) {
@@ -97,7 +84,7 @@ export const RenderNode = ({
         ref={textRef}
         style={{
           position: 'absolute',
-          // left: localDataRef.current.text.left,
+          left: localDataRef.current.text.left,
           top: localDataRef.current.text.top  - size/3,
           fontSize: DEFAULT_FONT_SIZE
         }}
